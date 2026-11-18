@@ -2,6 +2,8 @@
 
 **Five quiet minutes at your desk to put the day down.**
 
+**Try it:** https://mritopper.github.io/lull/ (open in the Meta Quest Browser, or preview on desktop)
+
 Lull is a hands-first, seated mixed reality wind-down ritual for Meta Quest, built with the
 [Immersive Web SDK](https://iwsdk.dev) (WebXR). It runs in the Meta Quest Browser with no
 install and no controllers.

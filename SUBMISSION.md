@@ -8,6 +8,7 @@ A five-minute, hands-only wind-down ritual: carry the day's thoughts into jars o
 **Track:** Productivity (habits tied to a recurring context: wind-down)
 **Division:** New Experience
 **Build link:** https://mritopper.github.io/lull/ (WebXR, open in Meta Quest Browser)
+**Source code:** https://github.com/mritopper/lull
 **Video:** (YouTube / Vimeo link)
 **Target launch date:** Q1 2027 as a PWA on the Meta Horizon Store *(confirm before submitting)*
 
