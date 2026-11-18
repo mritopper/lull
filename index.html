@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Lull: a five-minute, hands-first wind-down ritual for the end of the day, built for Meta Quest." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='14' fill='%23ffc27a'/%3E%3C/svg%3E" />
+    <title>Lull</title>
+    <style>
+      :root {
+        --bg: #0d0b17;
+        --ink: #fff4e6;
+        --muted: #b9b0d6;
+        --ember: #ffc27a;
+        --line: rgba(255, 255, 255, 0.14);
+      }
+      html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); }
+      body { font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", system-ui, sans-serif; overflow: hidden; }
+      #scene-container { position: fixed; inset: 0; }
+      #landing {
+        position: fixed; inset: 0; display: grid; place-items: center; padding: 16px;
+        background: radial-gradient(ellipse at 50% 60%, rgba(255, 170, 90, 0.18), transparent 55%),
+          linear-gradient(180deg, rgba(13, 11, 23, 0.9), rgba(13, 11, 23, 0.97));
+        transition: opacity 0.6s ease; z-index: 10;
+      }
+      #landing.hidden { opacity: 0; pointer-events: none; }
+      .card { max-width: 520px; text-align: center; }
+      .orb {
+        width: 56px; height: 56px; margin: 0 auto 22px; border-radius: 50%;
+        background: radial-gradient(circle, #ffe2b8 0%, var(--ember) 40%, rgba(255, 140, 60, 0) 72%);
+        animation: breathe 6s ease-in-out infinite;
+      }
+      @keyframes breathe { 0%, 100% { transform: scale(0.85); } 40% { transform: scale(1.25); } }
+      h1 { font-weight: 600; font-size: 44px; letter-spacing: 0.04em; margin: 0 0 8px; }
+      .tag { color: var(--muted); font-size: 17px; line-height: 1.5; margin: 0 0 26px; }
+      ol { text-align: left; color: var(--ink); font-size: 15px; line-height: 1.6; margin: 0 auto 28px; max-width: 400px; padding-left: 22px; }
+      ol li span { color: var(--muted); }
+      .buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+      button {
+        font: inherit; font-size: 16px; padding: 12px 22px; border-radius: 999px; cursor: pointer;
+        border: 1px solid var(--line); background: transparent; color: var(--ink);
+      }
+      button.primary { background: var(--ember); color: #24150a; border-color: transparent; font-weight: 600; }
+      button:disabled { opacity: 0.45; cursor: not-allowed; }
+      #xr-note { color: var(--muted); font-size: 13px; margin-top: 14px; min-height: 1em; }
+      .foot { color: #7e769e; font-size: 12px; margin-top: 26px; }
+    </style>
+    <script type="module" crossorigin src="./assets/index-C0fl1Zh_.js"></script>
+  </head>
+  <body>
+    <div id="scene-container"></div>
+    <div id="landing">
+      <div class="card">
+        <div class="orb"></div>
+        <h1>Lull</h1>
+        <p class="tag">Five quiet minutes, at your desk, to put the day down.</p>
+        <ol>
+          <li>Pinch the ember. <span>Thoughts drift up around you.</span></li>
+          <li>Carry each one to a jar on your real desk. <span>Tomorrow, Let it rest, or Not mine to carry.</span></li>
+          <li>Breathe with the lantern in your hands <span>while your room gently goes dark.</span></li>
+          <li>Tonight becomes a star. <span>Seven nights make a constellation.</span></li>
+        </ol>
+        <div class="buttons">
+          <button id="enter-xr" class="primary">Begin in headset</button>
+          <button id="preview">Preview in browser</button>
+        </div>
+        <div id="xr-note">Hands only. No controllers needed. Best seated.</div>
+        <div class="foot">Progress stays on this device.</div>
+      </div>
+    </div>
+  </body>
+</html>
